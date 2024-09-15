@@ -4,6 +4,7 @@ import { data } from "../Data";
 import axios from "axios";
 import CategoryCard from "../Card/TopHeadlineCard";
 import { useLocation } from "react-router-dom";
+import { API_KEY } from "./api";
 
 const Entertainment = () => {
     const [data, setData] = useState([]);
@@ -16,8 +17,9 @@ const Entertainment = () => {
         const fetchData = async () => {
             try {
                 setLoading(true)
-                const fetchData = await axios.get(`http://localhost:8000/api/category?category=entertainment&country=${country}&lang=${language}`);
-                const orignelData = fetchData.data.data.articles;
+                // const fetchData = await axios.get(`http://localhost:8000/api/category?category=entertainment&country=${country}&lang=${language}`);
+                const fetchData = await axios.get(`https://gnews.io/api/v4/top-headlines?category=entertainment&apikey=${API_KEY}&country=${country}&lang=${language}`);
+                const orignelData = fetchData.data.articles;
                 setData(orignelData)
             } catch (error) {
                 alert(`${error}`)

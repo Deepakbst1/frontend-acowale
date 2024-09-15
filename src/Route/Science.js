@@ -3,6 +3,7 @@ import SearchCard from "../Card/SearchCard"
 import axios from "axios";
 import CategoryCard from "../Card/TopHeadlineCard";
 import { useLocation } from "react-router-dom";
+import { API_KEY } from "./api";
 
 const Science = () => {
     const [data, setData] = useState([]);
@@ -19,8 +20,9 @@ const Science = () => {
         const data = async () => {
             try {
                 setLoading(true)
-                const response = await axios.get(`http://localhost:8000/api/category?category=science&country=${country}&lang=${language}`);
-                const orignelData = response.data.data.articles;
+                // const response = await axios.get(`http://localhost:8000/api/category?category=science&country=${country}&lang=${language}`);
+                const response = await axios.get(`https://gnews.io/api/v4/top-headlines?category=science&apikey=${API_KEY}&country=${country}&lang=${language}`);
+                const orignelData = response.data.articles;
                 setData(orignelData)
             } catch (error) {
                 alert(`${error}`)

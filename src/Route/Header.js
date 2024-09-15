@@ -49,27 +49,12 @@ const Header = () => {
   return (
     <div className="header">
       <div className="material-icons home" onClick={handleHomeOnClick}>home</div>
-      <div className="dropdowns">
-        <select value={selectedCountry} onChange={handleCountryChange}>
-          <option value="">Select Country</option>
-          <option value="us">United States</option>
-          <option value="uk">United Kingdom</option>
-          <option value="in">India</option>
-        </select>
-
-        <select value={selectedLanguage} onChange={handleLanguageChange}>
-          <option value="">Select Language</option>
-          <option value="en">English</option>
-          <option value="hi">Hindi</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-        </select>
-      </div>
       <nav className={`links ${showMenu ? "show" : ""}`}>
         <NavLink
           to={`/category/general?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           General
         </NavLink>
@@ -77,6 +62,7 @@ const Header = () => {
           to={`/category/world?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           World
         </NavLink>
@@ -84,6 +70,7 @@ const Header = () => {
           to={`/category/nation?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Nation
         </NavLink>
@@ -91,6 +78,7 @@ const Header = () => {
           to={`/category/business?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Business
         </NavLink>
@@ -98,6 +86,7 @@ const Header = () => {
           to={`/category/technology?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Technology
         </NavLink>
@@ -105,6 +94,7 @@ const Header = () => {
           to={`/category/entertainment?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Entertainment
         </NavLink>
@@ -112,6 +102,7 @@ const Header = () => {
           to={`/category/sports?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Sports
         </NavLink>
@@ -119,6 +110,7 @@ const Header = () => {
           to={`/category/science?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Science
         </NavLink>
@@ -126,11 +118,28 @@ const Header = () => {
           to={`/category/health?country=${selectedCountry}&language=${selectedLanguage}`}
           onClick={handleNavClick}
           className={({ isActive }) => (isActive ? "active-link" : "")}
+          style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}}
         >
           Health
         </NavLink>
+        <div className="dropdowns">
+        <select style={{backgroundColor:'rgb(53, 52, 52)', color:'white', border:'none'}} value={selectedCountry} onChange={handleCountryChange}>
+          <option value="">Select Country</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="in">India</option>
+        </select>
+
+        <select style={{backgroundColor:'rgb(53, 52, 52)', color:'white',border:'none'}} value={selectedLanguage} onChange={handleLanguageChange}>
+          <option value="">Select Language</option>
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+        </select>
+      </div>
       </nav>
-      <div className="input">
+      <div style={{backgroundColor:'rgb(53, 52, 52)', color:'white'}} className="input">
         <input
           placeholder="search your query"
           onChange={handleOnChange}

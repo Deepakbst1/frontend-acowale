@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import HeadlineCard from "../Card/HeadlineCard"
 import axios from "axios";
+import { API_KEY } from "./api";
 
 
 const Home = () => {
@@ -10,8 +11,9 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 setLoading(true)
-                const response = await axios.get("http://localhost:8000/api/search?q=example");
-                const orignelData = response.data.data.articles;
+                // const response = await axios.get("http://localhost:8000/api/search?q=example");
+                const response = await axios.get(`https://gnews.io/api/v4/search?q=example&apikey=${API_KEY}`);
+                const orignelData = response.data.articles;
                 setData(orignelData) 
             } catch (error) {
                 alert(error)
