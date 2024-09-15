@@ -1,0 +1,217 @@
+@import "../App.scss";
+
+.header {
+    width: 100%;
+    box-sizing: border-box;
+    @include rowItem(space-between, center, 0px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.dropdowns{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.links {
+    @include rowItem(null, center, 10px);
+
+    a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: rgb(225, 218, 218);
+        }
+    }
+
+
+    .active-link {
+        background-color: rgb(225, 218, 218);
+    }
+}
+
+.input {
+    width: 20%;
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgb(205, 205, 205);
+        border: none;
+        border-radius: 5px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.home {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.ham-menu {
+    display: none;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .ham-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header{
+        padding: 10px 0px;
+        @include rowItem(space-around, center, 10px);
+    }
+
+    .dropdowns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        a {
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgb(225, 218, 218);
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .input {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .ham-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+
+
+    .links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        a {
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgb(225, 218, 218);
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .input {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ham-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        a {
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgb(225, 218, 218);
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .input {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1281px) {
+    .ham-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        z-index: 999;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        a {
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgb(225, 218, 218);
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .input {
+        width: 20%;
+    }
+}

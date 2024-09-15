@@ -1,0 +1,92 @@
+@import "../App.scss";
+
+.category-card-container{
+    width: 100%;
+    @include rowItem(center,center,10px);
+    flex-wrap: wrap; 
+    padding: 10px;   
+}
+
+.category-card{
+    width: 60%;
+    height: fit-content;
+    @include rowItem(null,null,10px);
+    box-shadow: 0px 0px 16px rgb(210, 209, 209);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.category-btn{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    
+    a{
+        text-decoration: none;
+        color: blue;
+        padding: 10px 10px;
+        border-radius: 10px;
+    }
+}
+
+.left-part{
+    width: 40%;
+    @include rowItem(space-around,flex-start,10px);
+    flex-direction: column;
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    a{
+        text-decoration: none;
+        color: rgb(84, 84, 84);
+        &:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+    }
+}
+.right-part{
+    width: 60%;
+    @include rowItem(space-between,flex-start,5px);
+    flex-direction: column;
+    padding: 0px 0px 0px 10px;
+    .color{
+        color: gray;
+        font-size: 13px;
+    }
+    .span-color{
+        font-size: 15px;
+        font-weight: 600;
+        color: rgb(51, 51, 51);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .category-card{
+        width: 90%;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .category-card{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .category-card{
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1281px){
+    .category-card{
+        width: 70%;
+    }
+}

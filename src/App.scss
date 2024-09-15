@@ -1,0 +1,40 @@
+@import 'material-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+* {
+    transition: all 0.3s ease-out;
+  }
+
+  
+$bgColor1:blue;
+$tecxColor1 : white;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin rowItem($justify-content,$align-item,$gap){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-item;
+    gap: $gap;
+    box-sizing: border-box;
+}
+
+
+.parent-route{
+    width: 100%;
+    @include rowItem(space-between,null,0px);
+    flex-direction: column;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+

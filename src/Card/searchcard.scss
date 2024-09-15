@@ -1,0 +1,79 @@
+@import "../App.scss";
+
+
+
+.search-card-container{
+    @include rowItem(space-between,null,20px);
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.search-card{
+    width: 410px;
+    height:fit-content;
+    box-sizing: border-box;
+    @include rowItem(space-between,flex-start,20px);
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgb(226, 226, 226);
+    padding: 20px;
+    border-radius: 10px;
+    
+    img{
+        width:100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button{
+        background-color: blue;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .search-card{
+        width: 100%;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .search-card{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    
+    .search-card-container{
+        width: 90%;
+    }
+    .search-card{
+        width: 48%;
+        @include rowItem(space-around,flex-start,20px);
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1281px){
+    .search-card{
+       width: 48%;
+    }
+}
